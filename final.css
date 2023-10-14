@@ -1,0 +1,19 @@
+@media (min-aspect-ratio: 16/9){
+    .video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .video{
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+    }
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
