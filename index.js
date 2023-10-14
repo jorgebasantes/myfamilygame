@@ -2,53 +2,53 @@ document.addEventListener('DOMContentLoaded', () => {
     //list all card options
     const cardArray = [
       {
-        name: 'fries',
-        img: 'images/fries.png'
+        name: 'kate1',
+        img: 'images/kate1.png'
+      },
+      {
+        name: 'kate2',
+        img: 'images/kate2.png'
+      },
+      {
+        name: 'kate3',
+        img: 'images/kate3.png'
+      },
+      {
+        name: 'kate4',
+        img: 'images/kate4.png'
+      },
+      {
+        name: 'kate5',
+        img: 'images/kate5.png'
       },
       {
         name: 'cheeseburger',
         img: 'images/cheeseburger.png'
       },
       {
-        name: 'ice-cream',
-        img: 'images/ice-cream.png'
+        name: 'kate1',
+        img: 'images/kate1.png'
       },
       {
-        name: 'pizza',
-        img: 'images/pizza.png'
+        name: 'kate2',
+        img: 'images/kate2.png'
       },
       {
-        name: 'milkshake',
-        img: 'images/milkshake.png'
+        name: 'kate3',
+        img: 'images/kate3.png'
       },
       {
-        name: 'hotdog',
-        img: 'images/hotdog.png'
+        name: 'kate4',
+        img: 'images/kate4.png'
       },
       {
-        name: 'fries',
-        img: 'images/fries.png'
+        name: 'kate5',
+        img: 'images/kate5.png'
       },
       {
         name: 'cheeseburger',
         img: 'images/cheeseburger.png'
       },
-      {
-        name: 'ice-cream',
-        img: 'images/ice-cream.png'
-      },
-      {
-        name: 'pizza',
-        img: 'images/pizza.png'
-      },
-      {
-        name: 'milkshake',
-        img: 'images/milkshake.png'
-      },
-      {
-        name: 'hotdog',
-        img: 'images/hotdog.png'
-      }
     ]
   
     cardArray.sort(() => 0.5 - Math.random())
@@ -69,6 +69,24 @@ document.addEventListener('DOMContentLoaded', () => {
         grid.appendChild(card)
       }
     }
+  //next level screen
+  function showLetsGoScreen() {
+    const letsGoScreen = document.getElementById('letsGoScreen');
+    letsGoScreen.style.display = 'block';
+  }
+  
+  // Adjust the time (in milliseconds) to control how long the screen is displayed
+  
+  function goToNextLevel() {
+    // You can customize the URL for the next level/page
+    window.location.href = 'secondlevel.html'; // Change 'next_level.html' to your desired URL
+  }
+  
+  
+  
+  
+  
+  
   
     //check for matches
     function checkForMatch() {
@@ -97,7 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cardsChosenId = []
       resultDisplay.textContent = cardsWon.length
       if  (cardsWon.length === cardArray.length/2) {
-        resultDisplay.textContent = 'Congratulations! You found them all!'
+        showLetsGoScreen();
+        setTimeout(goToNextLevel,1500);
       }
     }
   
@@ -114,3 +133,5 @@ document.addEventListener('DOMContentLoaded', () => {
   
     createBoard()
   })
+  
+  
