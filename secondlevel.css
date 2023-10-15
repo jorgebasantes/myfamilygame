@@ -2,27 +2,26 @@
     margin: 0;
     padding: 0;
 }
-.body{
-    background-image: url(images/elizabeth.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
-  }
+
   h1{
     text-align: center;
-    color: rgb(65, 3, 136);
+    color: rgb(148, 3, 58);
+    font-size: 50px;
    }
    h3{
     color: rgb(27, 3, 17);
+    font-size: 40px;
+    margin-top: 30px;
    }
    .grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 400px;
-    height: 300px;
-    grid-gap:  20px;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-columns: 100px 100px 100px;
+    width: 300px;
+    height: 200px;
+    grid-gap:  30px;
+    margin-left: 50px;
+    margin-top: 100px;
   }
   .overlay {
     position: fixed;
@@ -44,4 +43,16 @@
   }
   .overlay {
     display: none;
+  }
+  section{
+    height: 1020px;
+    width: 480px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+  }
+  .section{
+    background-image: url(images/phone\ design2.png);
+    background-size: 500px;
+      background-repeat: no-repeat;
+      overflow: hidden;
   }
